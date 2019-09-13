@@ -23,7 +23,6 @@
     "make-plural": "^3.0.3",
     "math-interval-parser": "^1.1.0",
     "messageformat": "^0.3.1",
-    "mustache": "*",
     "sprintf-js": "^1.1.2"
   },
   "devDependencies": {
@@ -31,7 +30,7 @@
     "cookie-parser": "^1.4.4",
     "express": "^4.16.4",
     "jshint": "*",
-    "mocha": "*",
+    "mocha": "^6.2.0",
     "should": "*",
     "sinon": "*",
     "url": "^0.11.0",

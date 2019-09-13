@@ -2,6 +2,8 @@
 
 ### using handlebars (instead of mustache) to compile translations
 
+  * handlebars helpers can be used inside translations 
+
 Lightweight simple translation module with dynamic json storage. Supports plain vanilla node.js apps and should work with any framework (like _express_, _restify_ and probably more) that exposes an `app.use()` method passing in `res` and `req` objects.
 Uses common __('...') syntax in app and templates.
 Stores language files in json files compatible to [webtranslateit](http://webtranslateit.com/) json format.
