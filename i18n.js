@@ -780,10 +780,12 @@ module.exports = (function() {
 
   /**
    * splits and parses a phrase for mathematical interval expressions
+   * fix to allow || in phrase (used e.g. in handlebars templates / helpers)
+   * - replace all || with AmOgO before processing and replace back after
    */
   var parsePluralInterval = function(phrase, count) {
     var returnPhrase = phrase;
-    var phrases = phrase.split(/\|/);
+    var phrases = phrase.replace(/\|\|+/g, 'AmOgO').split(/\|/);
 
     // some() breaks on 1st true
     phrases.some(function(p) {
@@ -798,9 +800,8 @@ module.exports = (function() {
       } else {
         returnPhrase = p;
       }
-
     });
-    return returnPhrase;
+    return returnPhrase.replace(/AmOgO/g, "||");
   };
 
   /**
